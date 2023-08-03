@@ -2,6 +2,7 @@ import React, {useRef, useState} from 'react';
 import axios from 'axios';
 import {useNavigate} from "react-router-dom";
 import {loginApi} from "../../api/auth";
+import Button from '../atoms/Button';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -53,7 +54,7 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="비밀번호"
             />
-            <button onClick={handleLogin}>로그인</button>
+            <Button onClick={handleLogin}>Login</Button>
         </section>
     );
 };
